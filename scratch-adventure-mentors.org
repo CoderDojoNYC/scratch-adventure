@@ -1,0 +1,114 @@
+#+TITLE: Mentor guide for Scratch adventure session
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="flat-ui/bootstrap/css/bootstrap.css"></link>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="flat-ui/css/flat-ui.css"></link>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/scratch-adventure.css"></link>
+#+OPTIONS: toc:nil 
+
+#+HTML: <div class="container-fluid">
+
+#+HTML: <div class="well" style="width: 300px; float: right; margin: 10px;">
+#+TOC: headlines
+#+HTML: </div>
+
+* Mentor preparation
+** On Scratch
+Scratch programming is heavily based on Object-Oriented scripts. Scripts can be attached to the stage (which can have one Backdrop on top at a time) and Sprites.
+
+Suppose we add the following two sprites: Butterfly1 and Dog2.
+
+Scripts can be attached to Butterfly1 or can be attached to Dog2. If you want to attach the same script, you can Duplicate it and drag it to the Dog2.
+
+There are different Script categories. A script on a Sprite can move the sprite around, for example.
+
+Watch out: you can't control multiple Sprites from one place. Don't think you can play "puppetmaster" and just make an animation by telling everything what to do in order, as you might with Python or JavaScript. 
+
+Instead, you'll have to use the "broadcast" and "when I receive" blocks to have Sprites hand off control to one another as they take turns.
+
+(This weird actor model comes from Scratch's origins as a Small talk application.)
+
+** Other links
+- 
+- 
+
+** What do mentors do?
+*** Before kids come, _do a dry run_ for an hour and have mentors make a simple story
+**** Easiest way to make them understand
+*** Take over after kids have Scratch IDE open
+*** Walk around, see what kids are up to / if any are having trouble
+*** Answer questions
+*** Explain concepts if asked
+*** Try to avoid taking over kids' computers and doing things for them
+*** Scratch is pretty simple, you will probably be able to figure out most questions
+*** Talk about what got you into CS
+
+* Structure of session
+
+** Break into groups / mentor groups
+
+** Show story example
+
+** Icebreaker
+*** Bingo
+**** Per-group? Probably not
+**** To five in a row
+**** Scratch bingo?
+***** Sprite
+***** Backdrop
+
+** Brainstorming
+*** Brainstorm individually
+*** Maybe look at Flash/Scratch examples for ideas (might not be needed, we'll see)
+**** Maybe mentors point these out for someone struggling
+**** Try not to interfere too much though
+*** Then groups come together, discuss ideas, maybe pair up (but they're _not_ obligated to)
+
+** Registration / opening Scratch
+*** Maybe a brief stage talk on registration -> IDE basics
+
+** Give out handout / hand out link for people to look at on machines
+
+
+** Lightning talks on concepts
+*** Moving Sprites around
+*** Adding and changing Backdrops
+*** Inserting pictures from the Internet
+*** Adding music
+*** Broadcast and receive messages between blocks
+**** Events?
+
+** Present at end
+*** Open up for kid -> kid, mentor -> kid questions
+**** How did you do that in yours?
+**** (I mean, we prolly want this during the session itself too)
+*** Also remind kids to obtain public link so they can show off at home
+*** Make a master list of Scratch adventures that kids made today
+
+
+* Prereqs
+- registration of students and mentors
+  - ricky and ehtesh should manage, but just make sure it's getting done
+    - ask kids if they've signed in? tell mentors to do this
+  - map resulting adventures to students at end
+- icebreaker materials
+  - what's the icebreaker?
+    - bingo
+      - for the host
+      - per person
+        - cards
+        - chips
+- blank paper / pens for brainstorming (or maybe use MS Word on laptops)
+  - lay out composition/images
+  - maybe make examples of this?
+- Scratch cards, maybe
+  - Might help get people talking to each other
+  - 2 sets for the whole batch
+- print out and post up big instructions? (like Tracy's ppt-like things)
+- handout of instructions
+  - make a couple in case people don't have laptops
+  - everyone with a laptop should be able to just get to URL
+    - shorten URL, make publicly available
+      - same w/ examples
+- mentor laptops
+- kid laptops
+- nametags

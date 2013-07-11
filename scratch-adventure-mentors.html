@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Mentor guide for Scratch adventure session</title>
+<!-- 2013-07-11 Thu 01:04 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="author" content="Omar Rizwan"/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="flat-ui/bootstrap/css/bootstrap.css"></link>
+<link rel="stylesheet" type="text/css" href="flat-ui/css/flat-ui.css"></link>
+<link rel="stylesheet" type="text/css" href="css/scratch-adventure.css"></link>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Mentor guide for Scratch adventure session</h1>
+<div class="container-fluid">
+
+<div class="well" style="width: 300px; float: right; margin: 10px;">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Mentor preparation</a>
+<ul>
+<li><a href="#sec-1-1">1.1. On Scratch</a></li>
+<li><a href="#sec-1-2">1.2. Other links</a></li>
+<li><a href="#sec-1-3">1.3. What do mentors do?</a>
+<ul>
+<li><a href="#sec-1-3-1">1.3.1. Before kids come, <span class="underline">do a dry run</span> for an hour and have mentors make a simple story</a></li>
+<li><a href="#sec-1-3-2">1.3.2. Take over after kids have Scratch IDE open</a></li>
+<li><a href="#sec-1-3-3">1.3.3. Walk around, see what kids are up to / if any are having trouble</a></li>
+<li><a href="#sec-1-3-4">1.3.4. Answer questions</a></li>
+<li><a href="#sec-1-3-5">1.3.5. Explain concepts if asked</a></li>
+<li><a href="#sec-1-3-6">1.3.6. Try to avoid taking over kids' computers and doing things for them</a></li>
+<li><a href="#sec-1-3-7">1.3.7. Scratch is pretty simple, you will probably be able to figure out most questions</a></li>
+<li><a href="#sec-1-3-8">1.3.8. Talk about what got you into CS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Structure of session</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Break into groups / mentor groups</a></li>
+<li><a href="#sec-2-2">2.2. Show story example</a></li>
+<li><a href="#sec-2-3">2.3. Icebreaker</a>
+<ul>
+<li><a href="#sec-2-3-1">2.3.1. Bingo</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-4">2.4. Brainstorming</a>
+<ul>
+<li><a href="#sec-2-4-1">2.4.1. Brainstorm individually</a></li>
+<li><a href="#sec-2-4-2">2.4.2. Maybe look at Flash/Scratch examples for ideas (might not be needed, we'll see)</a></li>
+<li><a href="#sec-2-4-3">2.4.3. Then groups come together, discuss ideas, maybe pair up (but they're <span class="underline">not</span> obligated to)</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-5">2.5. Registration / opening Scratch</a>
+<ul>
+<li><a href="#sec-2-5-1">2.5.1. Maybe a brief stage talk on registration -&gt; IDE basics</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-6">2.6. Give out handout / hand out link for people to look at on machines</a></li>
+<li><a href="#sec-2-7">2.7. Lightning talks on concepts</a>
+<ul>
+<li><a href="#sec-2-7-1">2.7.1. Moving Sprites around</a></li>
+<li><a href="#sec-2-7-2">2.7.2. Adding and changing Backdrops</a></li>
+<li><a href="#sec-2-7-3">2.7.3. Inserting pictures from the Internet</a></li>
+<li><a href="#sec-2-7-4">2.7.4. Adding music</a></li>
+<li><a href="#sec-2-7-5">2.7.5. Broadcast and receive messages between blocks</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-8">2.8. Present at end</a>
+<ul>
+<li><a href="#sec-2-8-1">2.8.1. Open up for kid -&gt; kid, mentor -&gt; kid questions</a></li>
+<li><a href="#sec-2-8-2">2.8.2. Also remind kids to obtain public link so they can show off at home</a></li>
+<li><a href="#sec-2-8-3">2.8.3. Make a master list of Scratch adventures that kids made today</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Prereqs</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Mentor preparation</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> On Scratch</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Scratch programming is heavily based on Object-Oriented scripts. Scripts can be attached to the stage (which can have one Backdrop on top at a time) and Sprites.
+</p>
+
+<p>
+Suppose we add the following two sprites: Butterfly1 and Dog2.
+</p>
+
+<p>
+Scripts can be attached to Butterfly1 or can be attached to Dog2. If you want to attach the same script, you can Duplicate it and drag it to the Dog2.
+</p>
+
+<p>
+There are different Script categories. A script on a Sprite can move the sprite around, for example.
+</p>
+
+<p>
+Watch out: you can't control multiple Sprites from one place. Don't think you can play "puppetmaster" and just make an animation by telling everything what to do in order, as you might with Python or JavaScript. 
+</p>
+
+<p>
+Instead, you'll have to use the "broadcast" and "when I receive" blocks to have Sprites hand off control to one another as they take turns.
+</p>
+
+<p>
+(This weird actor model comes from Scratch's origins as a Small talk application.)
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Other links</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li></li>
+<li></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> What do mentors do?</h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1"><span class="section-number-4">1.3.1</span> Before kids come, <span class="underline">do a dry run</span> for an hour and have mentors make a simple story</h4>
+<div class="outline-text-4" id="text-1-3-1">
+</div><ol class="org-ol"><li>Easiest way to make them understand<br/></li></ol>
+</div>
+
+<div id="outline-container-sec-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2"><span class="section-number-4">1.3.2</span> Take over after kids have Scratch IDE open</h4>
+</div>
+<div id="outline-container-sec-1-3-3" class="outline-4">
+<h4 id="sec-1-3-3"><span class="section-number-4">1.3.3</span> Walk around, see what kids are up to / if any are having trouble</h4>
+</div>
+<div id="outline-container-sec-1-3-4" class="outline-4">
+<h4 id="sec-1-3-4"><span class="section-number-4">1.3.4</span> Answer questions</h4>
+</div>
+<div id="outline-container-sec-1-3-5" class="outline-4">
+<h4 id="sec-1-3-5"><span class="section-number-4">1.3.5</span> Explain concepts if asked</h4>
+</div>
+<div id="outline-container-sec-1-3-6" class="outline-4">
+<h4 id="sec-1-3-6"><span class="section-number-4">1.3.6</span> Try to avoid taking over kids' computers and doing things for them</h4>
+</div>
+<div id="outline-container-sec-1-3-7" class="outline-4">
+<h4 id="sec-1-3-7"><span class="section-number-4">1.3.7</span> Scratch is pretty simple, you will probably be able to figure out most questions</h4>
+</div>
+<div id="outline-container-sec-1-3-8" class="outline-4">
+<h4 id="sec-1-3-8"><span class="section-number-4">1.3.8</span> Talk about what got you into CS</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Structure of session</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Break into groups / mentor groups</h3>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Show story example</h3>
+</div>
+
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Icebreaker</h3>
+<div class="outline-text-3" id="text-2-3">
+</div><div id="outline-container-sec-2-3-1" class="outline-4">
+<h4 id="sec-2-3-1"><span class="section-number-4">2.3.1</span> Bingo</h4>
+<div class="outline-text-4" id="text-2-3-1">
+</div><ol class="org-ol"><li>Per-group? Probably not<br/></li>
+<li>To five in a row<br/></li>
+<li>Scratch bingo?<br/><ol class="org-ol"><li>Sprite<br/></li>
+<li>Backdrop<br/></li></ol>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> Brainstorming</h3>
+<div class="outline-text-3" id="text-2-4">
+</div><div id="outline-container-sec-2-4-1" class="outline-4">
+<h4 id="sec-2-4-1"><span class="section-number-4">2.4.1</span> Brainstorm individually</h4>
+</div>
+<div id="outline-container-sec-2-4-2" class="outline-4">
+<h4 id="sec-2-4-2"><span class="section-number-4">2.4.2</span> Maybe look at Flash/Scratch examples for ideas (might not be needed, we'll see)</h4>
+<div class="outline-text-4" id="text-2-4-2">
+</div><ol class="org-ol"><li>Maybe mentors point these out for someone struggling<br/></li>
+<li>Try not to interfere too much though<br/></li></ol>
+</div>
+
+<div id="outline-container-sec-2-4-3" class="outline-4">
+<h4 id="sec-2-4-3"><span class="section-number-4">2.4.3</span> Then groups come together, discuss ideas, maybe pair up (but they're <span class="underline">not</span> obligated to)</h4>
+</div>
+</div>
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> Registration / opening Scratch</h3>
+<div class="outline-text-3" id="text-2-5">
+</div><div id="outline-container-sec-2-5-1" class="outline-4">
+<h4 id="sec-2-5-1"><span class="section-number-4">2.5.1</span> Maybe a brief stage talk on registration -&gt; IDE basics</h4>
+</div>
+</div>
+<div id="outline-container-sec-2-6" class="outline-3">
+<h3 id="sec-2-6"><span class="section-number-3">2.6</span> Give out handout / hand out link for people to look at on machines</h3>
+</div>
+
+
+<div id="outline-container-sec-2-7" class="outline-3">
+<h3 id="sec-2-7"><span class="section-number-3">2.7</span> Lightning talks on concepts</h3>
+<div class="outline-text-3" id="text-2-7">
+</div><div id="outline-container-sec-2-7-1" class="outline-4">
+<h4 id="sec-2-7-1"><span class="section-number-4">2.7.1</span> Moving Sprites around</h4>
+</div>
+<div id="outline-container-sec-2-7-2" class="outline-4">
+<h4 id="sec-2-7-2"><span class="section-number-4">2.7.2</span> Adding and changing Backdrops</h4>
+</div>
+<div id="outline-container-sec-2-7-3" class="outline-4">
+<h4 id="sec-2-7-3"><span class="section-number-4">2.7.3</span> Inserting pictures from the Internet</h4>
+</div>
+<div id="outline-container-sec-2-7-4" class="outline-4">
+<h4 id="sec-2-7-4"><span class="section-number-4">2.7.4</span> Adding music</h4>
+</div>
+<div id="outline-container-sec-2-7-5" class="outline-4">
+<h4 id="sec-2-7-5"><span class="section-number-4">2.7.5</span> Broadcast and receive messages between blocks</h4>
+<div class="outline-text-4" id="text-2-7-5">
+</div><ol class="org-ol"><li>Events?<br/></li></ol>
+</div>
+</div>
+<div id="outline-container-sec-2-8" class="outline-3">
+<h3 id="sec-2-8"><span class="section-number-3">2.8</span> Present at end</h3>
+<div class="outline-text-3" id="text-2-8">
+</div><div id="outline-container-sec-2-8-1" class="outline-4">
+<h4 id="sec-2-8-1"><span class="section-number-4">2.8.1</span> Open up for kid -&gt; kid, mentor -&gt; kid questions</h4>
+<div class="outline-text-4" id="text-2-8-1">
+</div><ol class="org-ol"><li>How did you do that in yours?<br/></li>
+<li>(I mean, we prolly want this during the session itself too)<br/></li></ol>
+</div>
+
+<div id="outline-container-sec-2-8-2" class="outline-4">
+<h4 id="sec-2-8-2"><span class="section-number-4">2.8.2</span> Also remind kids to obtain public link so they can show off at home</h4>
+</div>
+<div id="outline-container-sec-2-8-3" class="outline-4">
+<h4 id="sec-2-8-3"><span class="section-number-4">2.8.3</span> Make a master list of Scratch adventures that kids made today</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Prereqs</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>registration of students and mentors
+<ul class="org-ul">
+<li>ricky and ehtesh should manage, but just make sure it's getting done
+<ul class="org-ul">
+<li>ask kids if they've signed in? tell mentors to do this
+</li>
+</ul>
+</li>
+<li>map resulting adventures to students at end
+</li>
+</ul>
+</li>
+<li>icebreaker materials
+<ul class="org-ul">
+<li>what's the icebreaker?
+<ul class="org-ul">
+<li>bingo
+<ul class="org-ul">
+<li>for the host
+</li>
+<li>per person
+<ul class="org-ul">
+<li>cards
+</li>
+<li>chips
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>blank paper / pens for brainstorming (or maybe use MS Word on laptops)
+<ul class="org-ul">
+<li>lay out composition/images
+</li>
+<li>maybe make examples of this?
+</li>
+</ul>
+</li>
+<li>Scratch cards, maybe
+<ul class="org-ul">
+<li>Might help get people talking to each other
+</li>
+<li>2 sets for the whole batch
+</li>
+</ul>
+</li>
+<li>print out and post up big instructions? (like Tracy's ppt-like things)
+</li>
+<li>handout of instructions
+<ul class="org-ul">
+<li>make a couple in case people don't have laptops
+</li>
+<li>everyone with a laptop should be able to just get to URL
+<ul class="org-ul">
+<li>shorten URL, make publicly available
+<ul class="org-ul">
+<li>same w/ examples
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>mentor laptops
+</li>
+<li>kid laptops
+</li>
+<li>nametags
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Omar Rizwan</p>
+<p class="date">Created: 2013-07-11 Thu 01:04</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.2.50.1 (<a href="http://orgmode.org">Org</a> mode 8.0.5)</p>
+<p class="xhtml-validation"><a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a></p>
+</div>
+</body>
+</html>

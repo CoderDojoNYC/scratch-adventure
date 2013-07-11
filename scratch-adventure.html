@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Making your own Scratch adventure: a guide</title>
+<!-- 2013-07-11 Thu 01:03 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="author" content="Omar Rizwan"/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="flat-ui/bootstrap/css/bootstrap.css"></link>
+<link rel="stylesheet" type="text/css" href="flat-ui/css/flat-ui.css"></link>
+<link rel="stylesheet" type="text/css" href="css/scratch-adventure.css"></link>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Making your own Scratch adventure: a guide</h1>
+<div class="container-fluid">
+
+<div class="well" style="width: 300px; float: right; margin: 10px;">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">What you can do</a></li>
+<li><a href="#sec-2">Planning ahead</a>
+<ul>
+<li><a href="#sec-2-1">Adventure game</a></li>
+<li><a href="#sec-2-2">Story game</a></li>
+<li><a href="#sec-2-3">Group discussion</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">Starting from Scratch</a>
+<ul>
+<li><a href="#sec-3-1">Get a Scratch account</a></li>
+<li><a href="#sec-3-2">Open up Scratch</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">How do I&#x2026;</a>
+<ul>
+<li><a href="#sec-4-1">insert a picture from the Internet?</a>
+<ul>
+<li><a href="#sec-4-1-1">Make it a Sprite!</a></li>
+<li><a href="#sec-4-1-2">Make it a Backdrop!</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-2">make different things happen over time?</a>
+<ul>
+<li><a href="#sec-4-2-1">What does that mean?</a></li>
+<li><a href="#sec-4-2-2">OK. How?</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-3">add a song or music I like?</a>
+<ul>
+<li><a href="#sec-4-3-1">Making your own</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-4">get things to disappear, appear, or move around?</a></li>
+<li><a href="#sec-4-5">make characters talk to each other?</a></li>
+<li><a href="#sec-4-6">change the background?</a></li>
+<li><a href="#sec-4-7">move between different scenes?</a></li>
+<li><a href="#sec-4-8">do something not listed here?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">What you can do</h2>
+<div class="outline-text-2" id="text-1">
+<p style="text-align: center"><iframe allowtransparency="true" width="485" height="402" class="img-polaroid" src="http://scratch.mit.edu/projects/embed/11328148/" frameborder="0" allowfullscreen></iframe></p>
+
+<p>
+Today, we're going to write a story, sort of like that (but not the same &#x2013; make it about whatever you want! add effects!), using the Scratch programming language.
+</p>
+
+<p>
+(Actually, that story is written in Scratch, and you can find out how I wrote it by going to <a href="http://scratch.mit.edu/projects/11328148/">its project page</a> on the Scratch website. Click "See Inside"!)
+</p>
+
+
+<div class="figure">
+<p><img src="./img/see-inside.png" style="height: 300px; width: auto;" class="img-polaroid" alt="see-inside.png"/></p>
+<p>See inside and find out how Scratch projects are made</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Planning ahead</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Now we'll think about what we want to do, so we're not &lt;flailing around?&gt;. Get some paper! Plan out what you want to do.
+</p>
+
+<p>
+&lt;Have example of different kinds of plans? storyboard for some? game mechanics for others?)&gt;
+</p>
+
+<p>
+&lt;Possibly examples of game concepts from Pedro's email (see Examples section below)&gt;
+</p>
+
+<p>
+Try to answer these questions: &lt;turn into worksheet?&gt;
+</p>
+
+<ol class="org-ol">
+<li>What's the Mission?
+</li>
+<li>Who is the main character?
+</li>
+<li>Where is this taking place?
+</li>
+<li>Who is the main enemy?
+</li>
+<li>Or list possible dangers.
+</li>
+</ol>
+
+<p>
+We came up with some ideas for games; maybe they'll inspire you, or maybe you'll come up with something totally new.
+</p>
+</div>
+
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">Adventure game</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+<b>Mission</b>: evade the Zombies
+</p>
+
+<p>
+<b>Hero</b>: Knight (Scratch)
+</p>
+
+<p>
+<b>Needed items</b>: sword, axe, 
+</p>
+
+<p>
+<b>Narrator</b>: Parrot (explain the mission)
+</p>
+
+<div class="figure-align-left">
+
+<div class="figure">
+<p><img src="http://desmorto.com/wp-content/uploads/2011/09/megal-slug-zombie-guy.gif" style="height: 80px; width: auto;" class="img-polaroid" alt="megal-slug-zombie-guy.gif"/></p>
+<p>Zombies</p>
+</div>
+</div>
+
+<p>
+Do not collide against the moving Zombies (moving horizontally back and forth), some are stationary.
+</p>
+
+<p>
+Copy &amp; Paste few zombies (repetition and use of random positioning?)
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">Story game</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+&lt;image of storyboard&gt;
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3">Group discussion</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Cool, you have a potential idea.
+</p>
+
+<p>
+If you want, share your idea with other people in your group, including your mentor. Maybe someone will like it and want to work with you! Maybe someone will be interested and want to follow your story as you make it.
+</p>
+
+<p>
+It can't hurt, even if you end up deciding to go your own way!
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Starting from Scratch</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Okay. Now that we have some idea of what we might want to make today (feel free to change your idea later, though), let's start making stuff.
+</p>
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">Get a Scratch account</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+We need a Scratch account. (You could start without making a Scratch account, I guess, but then you wouldn't be able to save. And that would be annoying.)
+</p>
+
+<p>
+Head to <a href="http://scratch.mit.edu">scratch.mit.edu</a> and click "Join Scratch," then follow the three steps. (You might need a parent's e-mail address if you're under 13 &#x2013; maybe call them over for this part if they're here.)
+</p>
+
+
+<div class="figure">
+<p><img src="./img/registration.png" style="height: 300px; width: auto;" class="img-polaroid" alt="registration.png"/></p>
+<p>Making an account of my own</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">Open up Scratch</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Okay. Now we can get to the fun part. <a href="http://scratch.mit.edu/projects/editor/?tip_bar=getStarted">Open up Scratch itself!</a>
+</p>
+
+
+<div class="figure">
+<p><img src="./img/scratch-ide.png" style="height: 500px; width: auto;" class="img-polaroid" alt="scratch-ide.png"/></p>
+<p>Parts of Scratch</p>
+</div>
+
+<p>
+It has a little guide for getting started &#x2013; the Tips. If you want, follow those Tips on the right side of the screen, then play around; if not, just X them out and play around right away! Drag some blocks from the Blocks toolbox to the Scripts area (the gray area partly covered by Tips).
+</p>
+
+<p>
+I'll give you a couple of minutes to play.
+</p>
+
+<p>
+&#x2026;
+</p>
+
+<p>
+&#x2026;
+</p>
+
+<p>
+Well, that was fun. Now what?
+</p>
+
+<p>
+Now you can start building your thing! I recommend you start with one scene &#x2013; just get all the pictures and objects in the right places. But it's totally up to you.
+</p>
+
+<p>
+If you don't know how to do something, I have some instructions on how to do stuff. You can also check out some other resources.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">How do I&#x2026;</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1">insert a picture from the Internet?</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Not too bad.
+</p>
+
+<div style="float: left;">
+
+<div class="figure">
+<p><img src="./img/upload-image/00-search.png" style="height: 300px; width: auto;" class="img-polaroid" alt="00-search.png"/></p>
+<p>Find it on Google Images first, then open the original.</p>
+</div>
+</div>
+
+<div style="float: right;">
+
+<div class="figure">
+<p><img src="./img/upload-image/01-save-image.png" style="height: 200px; width: auto;" class="img-polaroid" alt="01-save-image.png"/></p>
+<p>Save the original image to a file somewhere on your computer. (Remember where you put it!)</p>
+</div>
+</div>
+
+<div style="clear: both;">
+<p>
+Now we have a question. Do you want it as a <span class="underline">Backdrop</span> (hover over that word if you don't know what it means!) underneath other stuff, or do you want it as a <span class="underline">Sprite</span>?
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-1" class="outline-4">
+<h4 id="sec-4-1-1">Make it a Sprite!</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<p>
+Open up your Scratch project.
+</p>
+
+
+<div class="figure">
+<p><img src="./img/upload-image/02-upload-from-file.png" style="height: 400px; width: auto; class img-polaroid" alt="02-upload-from-file.png"/></p>
+<p>That image you just saved to your computer? Upload it back into Scratch with this button.</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-1-2" class="outline-4">
+<h4 id="sec-4-1-2">Make it a Backdrop!</h4>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2">make different things happen over time?</h3>
+<div class="outline-text-3" id="text-4-2">
+</div><div id="outline-container-sec-4-2-1" class="outline-4">
+<h4 id="sec-4-2-1">What does that mean?</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<p>
+So far, we've drawn some stuff on the screen. You could just use Paint or Word or something to do that. It looks cool, but we haven't done anything really special yet.
+</p>
+
+<p>
+Scratch is more powerful than those because:
+</p>
+<ol class="org-ol">
+<li>You can make what shows up on the screen change over time.
+(Okay, what's the big deal? You could draw a flipbook or something, too. It's just animation.)
+</li>
+<li>You can make the changes <b>depend on what the person running your program does</b>.
+That's what computer programming lets you do, in Scratch and in other languages. Somebody else runs your program, and they don't just get some prewritten result every time. They get to put some input in, and see something different depending on what they put in.
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-4-2-2" class="outline-4">
+<h4 id="sec-4-2-2">OK. How?</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<p>
+The right side of the screen in Scratch has a toolbox with some <span class="underline">blocks</span>, and a (currently empty) pane where you can put those blocks. The blocks in the pane are your program. They're what Scratch will run, and they can change what shows up on the <span class="underline">screen</span>.
+</p>
+
+<p>
+Blocks are like instructions for Scratch to do something to the screen.
+</p>
+
+<p>
+Link them to event blocks.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3">add a song or music I like?</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+This is a similar process. Get the MP3.
+</p>
+</div>
+
+<div id="outline-container-sec-4-3-1" class="outline-4">
+<h4 id="sec-4-3-1">Making your own</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+Or you can make your own music.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4">get things to disappear, appear, or move around?</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+Looks blocks.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-5" class="outline-3">
+<h3 id="sec-4-5">make characters talk to each other?</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+Broadcast blocks (or timing).
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-6" class="outline-3">
+<h3 id="sec-4-6">change the background?</h3>
+<div class="outline-text-3" id="text-4-6">
+<p>
+Backdrop.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-7" class="outline-3">
+<h3 id="sec-4-7">move between different scenes?</h3>
+<div class="outline-text-3" id="text-4-7">
+<p>
+Backdrop.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-8" class="outline-3">
+<h3 id="sec-4-8">do something not listed here?</h3>
+<div class="outline-text-3" id="text-4-8">
+<p>
+Etc. If I didn't explain anything well, it's my fault.
+</p>
+
+<ol class="org-ol">
+<li>Find it online.
+<ul class="org-ul">
+<li>Step-by-step intro ("Learn how to make a project in scratch"): <a href="http://scratch.mit.edu/projects/editor/?tip_bar=getStarted">http://scratch.mit.edu/projects/editor/?tip_bar=getStarted</a>
+</li>
+<li>Scratch 2.0 PDF: <a href="http://scratch.mit.edu/scratchr2/static/__1372902973__//pdfs/help/Getting-Started-Guide-Scratch2.pdf">http://scratch.mit.edu/scratchr2/static/__1372902973__//pdfs/help/Getting-Started-Guide-Scratch2.pdf</a>
+</li>
+<li>Scratch cards: <a href="http://scratch.mit.edu/help/cards">http://scratch.mit.edu/help/cards</a>
+</li>
+<li>Short video tutorials: <a href="http://scratch.mit.edu/help/videos">http://scratch.mit.edu/help/videos</a>
+</li>
+<li>Tracy's blocks
+</li>
+</ul>
+</li>
+
+<li>Ask kids near you!
+</li>
+
+<li>Ask a mentor!
+</li>
+</ol>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Omar Rizwan</p>
+<p class="date">Created: 2013-07-11 Thu 01:03</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.2.50.1 (<a href="http://orgmode.org">Org</a> mode 8.0.5)</p>
+<p class="xhtml-validation"><a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a></p>
+</div>
+</body>
+</html>
