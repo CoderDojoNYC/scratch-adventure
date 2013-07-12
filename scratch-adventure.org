@@ -14,7 +14,7 @@
 
 #+OPTIONS: toc:nil num:nil
 
-#+HTML: <div class="container-fluid">
+#+HTML: <div class="container">
 
 #+HTML: <div class="well" style="width: 300px; float: right; margin: 10px;">
 #+TOC: headlines
@@ -38,22 +38,11 @@ Now we'll think about what we want to do, so we're not <flailing around?>. Get s
 
 <Possibly examples of game concepts from Pedro's email (see Examples section below)>
 
-Try to answer these questions: <turn into worksheet?>
-
-1. What's the Mission?
-2. Who is the main character?
-3. Where is this taking place?
-4. Who is the main enemy?
-5. Or list possible dangers.
+<embed worksheet, sample>
 
 We came up with some ideas for games; maybe they'll inspire you, or maybe you'll come up with something totally new.
 
 ** Adventure game
-
-Knight vs Zombies
-http://scratch.mit.edu/projects/11328271/
-
-
 *Mission*: pick the unicorn and reach out Master Yoda for Enlightment while evading the deadly Zombies
 
 *Hero*: Knight (Scratch)
@@ -70,10 +59,15 @@ Copy & Paste few zombies
 [[http://desmorto.com/wp-content/uploads/2011/09/megal-slug-zombie-guy.gif]]
 #+HTML: </div>
 
-#+CAPTION: Knight vs Zombies
+#+CAPTION: Knight vs. Zombies
 #+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/knight-vs-zombies.png]]
 
+*** Result
+We used Scratch and went from this idea to a real game: "Knight vs. Zombies"!
+
+Knight vs Zombies
+http://scratch.mit.edu/projects/11328271/
 
 ** Story game
 <image of storyboard>
@@ -173,17 +167,17 @@ This is a similar process. Get the MP3.
 Select a song or record or upload your sown
 
 #+CAPTION: How to add a song
-#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+#+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/scratch-audio-select.png]]
 
 How to play a sound file
 #+CAPTION: How to play a sound file
-#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+#+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/scratch-audio-play.png]]
 
 ** get things to disappear, appear?
 #+CAPTION: How to disappear and appear?
-#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+#+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/scratch-show-hide.png]]
 
 ** make characters talk to each other?
@@ -193,53 +187,35 @@ This example is from: Pokemon Stories http://scratch.mit.edu/projects/11283077/
 1. Make sure to have at least two Sprites in your scene.
 
 #+CAPTION: Sprites for Elephant and Pikka
-#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+#+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/dialogue/dialogue-sprites.png]]
 
 2. Select the Elephant Sprite and add alternating "Say" and "Wait" blocks.
 
 #+CAPTION: Elephant's script
-#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+#+ATTR_HTML: :style height: 100px; width: auto; :class img-polaroid
 [[./img/dialogue/dialogue-elephant.png]]
 
 3. Select the Pikka Sprite and alternate the Wait and Say with delays matching the Elephant's.
 In the first step, the Elephant "says" for 5 seconds (Hence, Pikka wait for 5 seconds), and so on.
 
 #+CAPTION: Pikka's script
-#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+#+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/dialogue/dialogue-pikka.png]]
 
 
 ** change the background?
 
 #+CAPTION: How to customize the background image in a backdrop
-#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+#+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/scratch-background.png]]
 
 
 ** move between different scenes?
 
 #+CAPTION: How to change between different backdrops
-#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+#+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/scratch-switch-backdrop.png]]
-
-
-** Few Stories to look inside
-
-Pokemon Stories (dialogue using delays)
-http://scratch.mit.edu/projects/11283077/
-
-Haunted House (longer dialogue using delays)
-http://scratch.mit.edu/projects/11279743/
-
-Linear story (multiple backgdrops)
-http://scratch.mit.edu/projects/11266878/
-
-Teens at the Castle (dialogue using broadcasting - more advanced)
-http://scratch.mit.edu/projects/10128197/
-
-Starter Projects
-http://scratch.mit.edu/starter_projects/
 
 
 ** do something not listed here?
@@ -256,5 +232,20 @@ Etc. If I didn't explain anything well, it's my fault.
 
 3. Ask a mentor!
 
+* Other examples
+- Pokemon Stories (dialogue using delays)
+  - http://scratch.mit.edu/projects/11283077/
+
+- Haunted House (longer dialogue using delays)
+  - http://scratch.mit.edu/projects/11279743/
+
+- Linear story (multiple backgdrops)
+  - http://scratch.mit.edu/projects/11266878/
+
+- Teens at the Castle (dialogue using broadcasting - more advanced)
+  - http://scratch.mit.edu/projects/10128197/
+
+- Starter Projects
+  - http://scratch.mit.edu/starter_projects/
 
 #+HTML: </div>
