@@ -171,13 +171,22 @@ How to play a sound file
 
 ** make characters talk to each other?
 
+This example is from: Pokemon Stories http://scratch.mit.edu/projects/11283077/
+
+1. Make sure to have at least two Sprites in your scene.
+
 #+CAPTION: Sprites for Elephant and Pikka
 #+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
 [[./img/dialogue/dialogue-sprites.png]]
 
+2. Select the Elephant Sprite and add alternating "Say" and "Wait" blocks.
+
 #+CAPTION: Elephant's script
 #+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
 [[./img/dialogue/dialogue-elephant.png]]
+
+3. Select the Pikka Sprite and alternate the Wait and Say with delays matching the Elephant's.
+In the first step, the Elephant "says" for 5 seconds (Hence, Pikka wait for 5 seconds), and so on.
 
 #+CAPTION: Pikka's script
 #+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
