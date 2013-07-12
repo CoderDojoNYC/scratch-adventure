@@ -153,12 +153,16 @@ Link them to event blocks.
 This is a similar process. Get the MP3.
 
 *** Making your own
-Or you can make your own music.
+Select a song or record or upload your sown
 
-** get things to move around?
-#+CAPTION: How to move around
+#+CAPTION: How to add a song
 #+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
-[[./img/scratch-move.png]]
+[[./img/scratch-audio-select.png]]
+
+How to play a sound file
+#+CAPTION: How to play a sound file
+#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+[[./img/scratch-audio-play.png]]
 
 ** get things to disappear, appear?
 #+CAPTION: How to disappear and appear?
