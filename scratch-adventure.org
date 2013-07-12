@@ -40,13 +40,19 @@ Try to answer these questions: <turn into worksheet?>
 We came up with some ideas for games; maybe they'll inspire you, or maybe you'll come up with something totally new.
 
 ** Adventure game
-*Mission*: evade the Zombies
+
+Knight vs Zombies
+http://scratch.mit.edu/projects/11328271/
+
+*Mission*: pick the unicorn and reach out Master Yoda for Enlightment while evading the deadly Zombies
 
 *Hero*: Knight (Scratch)
 
-*Needed items*: sword, axe, 
+*Narrator*: Parrot (states the mission)
 
-*Narrator*: Parrot (explain the mission)
+Do not collide against the moving Zombies (moving horizontally back and forth), some are stationary.
+
+Copy & Paste few zombies
 
 #+HTML: <div class="figure-align-left">
 #+CAPTION: Zombies
