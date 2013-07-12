@@ -2,7 +2,16 @@
 
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="flat-ui/bootstrap/css/bootstrap.css"></link>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="flat-ui/css/flat-ui.css"></link>
+
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/scratch-adventure.css"></link>
+
+#+HTML_HEAD: <script type="text/javascript" src="flat-ui/js/jquery-1.8.3.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="flat-ui/js/bootstrap.min.js"></script>
+
+#+HTML_HEAD: <script type="text/javascript" src="js/scratch-adventure.js"></script>
+
+#+MACRO: term @@html:<span class="vocab-term">$1</span>@@
+
 #+OPTIONS: toc:nil num:nil
 
 #+HTML: <div class="container-fluid">
@@ -14,7 +23,7 @@
 * What you can do
 #+HTML: <p style="text-align: center"><iframe allowtransparency="true" width="485" height="402" class="img-polaroid" src="http://scratch.mit.edu/projects/embed/11328148/" frameborder="0" allowfullscreen></iframe></p>
 
-Today, we're going to write a story, sort of like that (but not the same -- make it about whatever you want! add effects!), using the Scratch programming language.
+Today, we're going to write a story, sort of like that (but not the same -- make it about whatever you want! add effects!). We'll use {{{term(Scratch)}}}.
 
 (Actually, that story is written in Scratch, and you can find out how I wrote it by going to [[http://scratch.mit.edu/projects/11328148/][its project page]] on the Scratch website. Click "See Inside"!)
 
@@ -23,7 +32,7 @@ Today, we're going to write a story, sort of like that (but not the same -- make
 [[./img/see-inside.png]]
 
 * Planning ahead
-Now we'll think about what we want to do, so we're not <flailing around?>. Get some paper! Plan out what you want to do.
+Now we'll think about what we want to do, so we're not <flailing around?>. Get some paper! Plan out what you want to do. <Subst in Ricky's worksheet>
 
 <Have example of different kinds of plans? storyboard for some? game mechanics for others?)>
 
@@ -95,7 +104,7 @@ Okay. Now we can get to the fun part. [[http://scratch.mit.edu/projects/editor/?
 #+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/scratch-ide.png]]
 
-It has a little guide for getting started -- the Tips. If you want, follow those Tips on the right side of the screen, then play around; if not, just X them out and play around right away! Drag some blocks from the Blocks toolbox to the Scripts area (the gray area partly covered by Tips).
+It has a little guide for getting started -- the {{{term(Tips)}}}. If you want, follow those Tips on the right side of the screen, then play around; if not, just X them out and play around right away! Drag some {{{term(Block)}}}s from the {{{term(Blocks Toolbox)}}} to the {{{term(Scripts Area)}}} (the gray area partly covered by Tips).
 
 I'll give you a couple of minutes to play.
 
@@ -126,7 +135,7 @@ Not too bad.
 #+HTML: </div>
 
 #+HTML: <div style="clear: both;">
-Now we have a question. Do you want it as a _Backdrop_ (hover over that word if you don't know what it means!) underneath other stuff, or do you want it as a _Sprite_?
+Now we have a question. Do you want it as a {{{term(Backdrop)}}} underneath other stuff, or do you want it as a {{{term(Sprite)}}}?
 #+HTML: </div>
 
 *** Make it a Sprite!
@@ -151,7 +160,7 @@ Scratch is more powerful than those because:
    That's what computer programming lets you do, in Scratch and in other languages. Somebody else runs your program, and they don't just get some prewritten result every time. They get to put some input in, and see something different depending on what they put in.
 
 *** OK. How?
-The right side of the screen in Scratch has a toolbox with some _blocks_, and a (currently empty) pane where you can put those blocks. The blocks in the pane are your program. They're what Scratch will run, and they can change what shows up on the _screen_.
+The right side of the screen in Scratch has a toolbox with some {{{term(Block)}}}s, and a (currently empty) {{{term(Script Area)}}} where you can put those Blocks. The Blocks in the Script Area are your program. They're what Scratch will run, and they can change what shows up on the {{{term(Stage)}}}.
 
 Blocks are like instructions for Scratch to do something to the screen.
 

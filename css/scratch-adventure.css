@@ -6,3 +6,8 @@
 .figure-align-left .figure p {
     text-align: left;
 }
+
+.vocab-term {
+    cursor: help;
+    border-bottom: 1px dashed gray;
+}
