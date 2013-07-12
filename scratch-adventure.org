@@ -44,6 +44,7 @@ We came up with some ideas for games; maybe they'll inspire you, or maybe you'll
 Knight vs Zombies
 http://scratch.mit.edu/projects/11328271/
 
+
 *Mission*: pick the unicorn and reach out Master Yoda for Enlightment while evading the deadly Zombies
 
 *Hero*: Knight (Scratch)
@@ -60,9 +61,10 @@ Copy & Paste few zombies
 [[http://desmorto.com/wp-content/uploads/2011/09/megal-slug-zombie-guy.gif]]
 #+HTML: </div>
 
-Do not collide against the moving Zombies (moving horizontally back and forth), some are stationary.
+#+CAPTION: Knight vs Zombies
+#+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
+[[./img/knight-vs-zombies.png]]
 
-Copy & Paste few zombies (repetition and use of random positioning?)
 
 ** Story game
 <image of storyboard>
