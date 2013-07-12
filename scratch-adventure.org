@@ -155,17 +155,44 @@ This is a similar process. Get the MP3.
 *** Making your own
 Or you can make your own music.
 
-** get things to disappear, appear, or move around?
-Looks blocks.
+** get things to move around?
+#+CAPTION: How to move around
+#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+[[./img/scratch-move.png]]
+
+** get things to disappear, appear?
+#+CAPTION: How to disappear and appear?
+#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+[[./img/scratch-show-hide.png]]
 
 ** make characters talk to each other?
-Broadcast blocks (or timing).
+
+#+CAPTION: Sprites for Elephant and Pikka
+#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+[[./img/dialogue/dialogue-sprites.png]]
+
+#+CAPTION: Elephant's script
+#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+[[./img/dialogue/dialogue-elephant.png]]
+
+#+CAPTION: Pikka's script
+#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+[[./img/dialogue/dialogue-pikka.png]]
+
 
 ** change the background?
-Backdrop.
+
+#+CAPTION: How to customize the background image in a backdrop
+#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+[[./img/scratch-background.png]]
+
 
 ** move between different scenes?
-Backdrop.
+
+#+CAPTION: How to change between different backdrops
+#+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
+[[./img/scratch-switch-backdrop.png]]
+
 
 ** do something not listed here?
 Etc. If I didn't explain anything well, it's my fault.
