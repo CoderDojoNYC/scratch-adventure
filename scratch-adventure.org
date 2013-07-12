@@ -207,6 +207,24 @@ In the first step, the Elephant "says" for 5 seconds (Hence, Pikka wait for 5 se
 [[./img/scratch-switch-backdrop.png]]
 
 
+** Few Stories to look inside
+
+Pokemon Stories (dialogue using delays)
+http://scratch.mit.edu/projects/11283077/
+
+Haunted House (longer dialogue using delays)
+http://scratch.mit.edu/projects/11279743/
+
+Linear story (multiple backgdrops)
+http://scratch.mit.edu/projects/11266878/
+
+Teens at the Castle (dialogue using broadcasting - more advanced)
+http://scratch.mit.edu/projects/10128197/
+
+Starter Projects
+http://scratch.mit.edu/starter_projects/
+
+
 ** do something not listed here?
 Etc. If I didn't explain anything well, it's my fault.
 
