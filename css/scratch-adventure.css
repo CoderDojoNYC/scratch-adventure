@@ -1,0 +1,18 @@
+#table-of-contents {
+    margin-top: -15px;
+    margin-bottom: -10px;
+}
+
+.figure-align-left .figure p {
+    text-align: left;
+}
+
+.vocab-term {
+    cursor: help;
+    border-bottom: 1px dashed gray;
+}
+
+img.media-object {
+    height: 64px;
+    width: auto;
+}
