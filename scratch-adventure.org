@@ -10,6 +10,14 @@
 
 #+HTML_HEAD: <script type="text/javascript" src="js/scratch-adventure.js"></script>
 
+#+MACRO: embed-scratch @@html:<p style="text-align: center"><iframe allowtransparency="true" width="485" height="402" class="img-polaroid" src="http://scratch.mit.edu/projects/embed/$1/" frameborder="0" allowfullscreen></iframe></p>@@
+
+# $1: heading
+# $2: description
+# $3: URL
+# $4: thumbnail
+#+MACRO: media-item @@html:<div class="media"><a class="pull-left" href="$3"><img class="media-object" src="$4"></img></a><div class="media-body"><h4 class="media-heading"><a href="$3">$1</a></h4><p>$2</p></div>@@
+
 #+MACRO: term @@html:<span class="vocab-term">$1</span>@@
 
 #+OPTIONS: toc:nil num:nil
@@ -21,7 +29,7 @@
 #+HTML: </div>
 
 * What you can do
-#+HTML: <p style="text-align: center"><iframe allowtransparency="true" width="485" height="402" class="img-polaroid" src="http://scratch.mit.edu/projects/embed/11328148/" frameborder="0" allowfullscreen></iframe></p>
+{{{embed-scratch(11328148)}}}
 
 Today, we're going to write a story, sort of like that (but not the same -- make it about whatever you want! add effects!). We'll use {{{term(Scratch)}}}.
 
@@ -32,17 +40,20 @@ Today, we're going to write a story, sort of like that (but not the same -- make
 [[./img/see-inside.png]]
 
 * Planning ahead
-Now we'll think about what we want to do, so we're not <flailing around?>. Get some paper! Plan out what you want to do. <Subst in Ricky's worksheet>
+Now we'll think about what we want to do, so we have somewhere to start when we start making stuff in Scratch. You should have a worksheet that looks kind of like this:
 
-<Have example of different kinds of plans? storyboard for some? game mechanics for others?)>
+Plan out what you want to do. We came up with some ideas for ourselves, but I'm sure you'll have even better ones.
 
-<Possibly examples of game concepts from Pedro's email (see Examples section below)>
-
-<embed worksheet, sample>
-
-We came up with some ideas for games; maybe they'll inspire you, or maybe you'll come up with something totally new.
+** CoderDojo story
+Remember the Scratch story you saw at the beginning? Here's how we might have planned it out before actually making it:
+#+CAPTION: An example of what your idea might look like
+#+ATTR_HTML: :style height: 400px; width: auto; :class img-polaroid
+[[./img/storyboard-example.png]]
 
 ** Adventure game
+Here's another game we made, called Knight vs. Zombies.
+
+*** Idea
 *Mission*: pick the unicorn and reach out Master Yoda for Enlightment while evading the deadly Zombies
 
 *Hero*: Knight (Scratch)
@@ -59,18 +70,10 @@ Copy & Paste few zombies
 [[http://desmorto.com/wp-content/uploads/2011/09/megal-slug-zombie-guy.gif]]
 #+HTML: </div>
 
-#+CAPTION: Knight vs. Zombies
-#+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
-[[./img/knight-vs-zombies.png]]
-
 *** Result
 We used Scratch and went from this idea to a real game: "Knight vs. Zombies"!
 
-Knight vs Zombies
-http://scratch.mit.edu/projects/11328271/
-
-** Story game
-<image of storyboard>
+{{{embed-scratch(11328271)}}}
 
 ** Group discussion
 Cool, you have a potential idea.
@@ -94,7 +97,7 @@ Head to [[http://scratch.mit.edu][scratch.mit.edu]] and click "Join Scratch," th
 ** Open up Scratch
 Okay. Now we can get to the fun part. [[http://scratch.mit.edu/projects/editor/?tip_bar%3DgetStarted][Open up Scratch itself!]]
 
-#+CAPTION: Parts of Scratch
+#+CAPTION: Parts of Scratch. There's a lot to take in.
 #+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/scratch-ide.png]]
 
@@ -113,42 +116,29 @@ Now you can start building your thing! I recommend you start with one scene -- j
 If you don't know how to do something, I have some instructions on how to do stuff. You can also check out some other resources.
 
 * How do I...
-** insert a picture from the Internet?
-Not too bad.
+** insert a picture from the Internet as a Sprite?
+You'll have to get the picture onto your computer, then feed it back into Scratch so it becomes a Sprite you can use in your story.
 
-#+HTML: <div style="float: left;">
 #+CAPTION: Find it on Google Images first, then open the original.
 #+ATTR_HTML: :style height: 300px; width: auto; :class img-polaroid
 [[./img/upload-image/00-search.png]]
-#+HTML: </div>
 
-#+HTML: <div style="float: right;">
 #+CAPTION: Save the original image to a file somewhere on your computer. (Remember where you put it!)
 #+ATTR_HTML: :style height: 200px; width: auto; :class img-polaroid
 [[./img/upload-image/01-save-image.png]]
-#+HTML: </div>
-
-#+HTML: <div style="clear: both;">
-Now we have a question. Do you want it as a {{{term(Backdrop)}}} underneath other stuff, or do you want it as a {{{term(Sprite)}}}?
-#+HTML: </div>
-
-*** Make it a Sprite!
-Open up your Scratch project.
 
 #+CAPTION: That image you just saved to your computer? Upload it back into Scratch with this button.
 #+ATTR_HTML: :style height: 400px; width: auto; class img-polaroid
 [[./img/upload-image/02-upload-from-file.png]]
 
-*** Make it a Backdrop!
-
-
+You can make as many Sprites as you need and move them around to form your initial scene.
 
 ** make different things happen over time?
 *** What does that mean?
 So far, we've drawn some stuff on the screen. You could just use Paint or Word or something to do that. It looks cool, but we haven't done anything really special yet.
 
 Scratch is more powerful than those because:
-1. You can make what shows up on the screen change over time.
+1. You can make what shows up on the screen animate.
    (Okay, what's the big deal? You could draw a flipbook or something, too. It's just animation.)
 2. You can make the changes *depend on what the person running your program does*.
    That's what computer programming lets you do, in Scratch and in other languages. Somebody else runs your program, and they don't just get some prewritten result every time. They get to put some input in, and see something different depending on what they put in.
@@ -161,85 +151,78 @@ Blocks are like instructions for Scratch to do something to the screen.
 Link them to event blocks.
 
 ** add a song or music I like?
-This is a similar process. Get the MP3.
-
-*** Making your own
-Select a song or record or upload your sown
+You can pick a built-in sound, record your own, or upload one from your computer.
 
 #+CAPTION: How to add a song
 #+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/scratch-audio-select.png]]
 
-How to play a sound file
-#+CAPTION: How to play a sound file
+Now that it's part of your project, you can use the Play Sound Block to play it!
+#+CAPTION: Playing the song
 #+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/scratch-audio-play.png]]
 
-** get things to disappear, appear?
-#+CAPTION: How to disappear and appear?
+** get things (Sprites) to disappear and reappear?
+#+CAPTION: How to hide and show Sprites
 #+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/scratch-show-hide.png]]
 
 ** make characters talk to each other?
-
-This example is from: Pokemon Stories http://scratch.mit.edu/projects/11283077/
-
+This example is from Pokemon Stories:
+{{{embed-scratch(11283077)}}}
+    
 1. Make sure to have at least two Sprites in your scene.
 
-#+CAPTION: Sprites for Elephant and Pikka
+#+CAPTION: Sprites for Elephant and Pikachu
 #+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/dialogue/dialogue-sprites.png]]
 
-2. Select the Elephant Sprite and add alternating "Say" and "Wait" blocks.
+2. Select the Elephant Sprite and add alternating "Say" and "Wait" Blocks.
 
-#+CAPTION: Elephant's script
-#+ATTR_HTML: :style height: 100px; width: auto; :class img-polaroid
+#+CAPTION: Elephant's Script
+#+ATTR_HTML: :style height: 200px; width: auto; :class img-polaroid
 [[./img/dialogue/dialogue-elephant.png]]
 
-3. Select the Pikka Sprite and alternate the Wait and Say with delays matching the Elephant's.
+3. Select the Pikachu Sprite and alternate the Wait and Say Blocks with delays matching the Elephant's.
 In the first step, the Elephant "says" for 5 seconds (Hence, Pikka wait for 5 seconds), and so on.
 
-#+CAPTION: Pikka's script
-#+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
+#+CAPTION: Pikachu's Script
+#+ATTR_HTML: :style height: 220px; width: auto; :class img-polaroid
 [[./img/dialogue/dialogue-pikka.png]]
 
-
 ** change the background?
-
 #+CAPTION: How to customize the background image in a backdrop
 #+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/scratch-background.png]]
 
-
 ** move between different scenes?
-
 #+CAPTION: How to change between different backdrops
 #+ATTR_HTML: :style height: 500px; width: auto; :class img-polaroid
 [[./img/scratch-switch-backdrop.png]]
 
-
 ** do something not listed here?
-Etc. If I didn't explain anything well, it's my fault.
+Try things in this order if you get stuck or can't figure something out.
 
-1. Find it online.
-   - Step-by-step intro ("Learn how to make a project in scratch"): http://scratch.mit.edu/projects/editor/?tip_bar=getStarted
-   - Scratch 2.0 PDF: http://scratch.mit.edu/scratchr2/static/__1372902973__//pdfs/help/Getting-Started-Guide-Scratch2.pdf
-   - Scratch cards: http://scratch.mit.edu/help/cards
-   - Short video tutorials: http://scratch.mit.edu/help/videos
-   - Tracy's blocks
+1. Find it online. There are a bunch of sites where you can learn how to use Scratch:
+   - [[http://scratch.mit.edu/projects/editor/?tip_bar%3DgetStarted][Step-by-step Tips intro]]
+   - [[http://scratch.mit.edu/scratchr2/static/__1372902973__//pdfs/help/Getting-Started-Guide-Scratch2.pdf][Scratch 2.0 Getting Started guide]]
+   - [[http://scratch.mit.edu/help/cards][Scratch cards]]
+   - [[http://scratch.mit.edu/help/videos][Short video tutorials]]
 
-2. Ask kids near you!
+2. Ask kids near you! Maybe they got stuck on the same problem.
 
 3. Ask a mentor!
 
 * Other examples
+# {{{media-item(Pokemon Stories (dialogue using delays),Dialogue using delays,http://scratch.mit.edu/projects/11283077/,http://cdn.scratch.mit.edu/static/site/projects/thumbnails/1132/2321.png)}}}
+
 - Pokemon Stories (dialogue using delays)
   - http://scratch.mit.edu/projects/11283077/
 
 - Haunted House (longer dialogue using delays)
   - http://scratch.mit.edu/projects/11279743/
 
-- Linear story (multiple backgdrops)
+- Linear story (multiple backdrops)
   - http://scratch.mit.edu/projects/11266878/
 
 - Teens at the Castle (dialogue using broadcasting - more advanced)
